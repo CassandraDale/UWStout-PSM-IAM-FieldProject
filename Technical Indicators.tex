@@ -1,0 +1,70 @@
+\documentclass{article}
+\title{Technical Indicators}
+\author{Name of Author}
+
+\begin{document}
+\maketitle
+
+Technical Indicator:  Any class of metrics whose value is derived from generic price activity in a stock or asset.  They try to predict the future price levels or general price direction of the asset by looking at past patterns. (Investopedia)
+
+
+Relative Strength Index:  Compares the magnitude of recent gains to recent losses in an attempt to determine overbought and oversold conditions of an asset.
+
+
+Its formula is
+RSI=100-100/(1+RS)
+
+
+Where RS is the Average of x days’ up closes divided by Average of x days’ down closes.
+
+
+Large gains or drops in the price of an asset will affect the RSI by creating false buy or sell signals.  We might be able to test for false positives by using a ROC Curve.
+
+
+Money Flow Index:  Uses a stock’s price and volume to predict the reliability of the current trend. A period of 14 days is suggested.
+
+
+Step 1:  Average the High, Low and Close values for stock prices—this is considered the typical price.
+
+
+Step 2:  Multiply the typical price by the volume of the stock—this is called the Raw Money Flow.
+
+
+Step 3:  (14-day-period of Positive Money Flow)/(14-day-period of Negative money flow)
+
+
+	We get Positive Money Flow when the current typical price > previous typical price value, and Negative Money Flow when the current typical price<previous typical price.
+    
+    
+Step 4:  100-[100/(1+Money Flow Ratio)]—this is the Money Flow Index.
+
+
+When the MFI moves in the opposite direction as the price, this divergence is often a leading indicator of a change in the current trend.
+
+
+MACD:  Shows the relationship between two moving averages of prices.  This is calculated by subtracting the 26 day EMA from the 12 day EMA.  A 9 day EMA, called the “signal line” is often plotted on top of the MACD, functioning as a trigger for buy and sell signals.
+
+
+This is where we look at Crossovers
+When MACD is above signal line bullish, below means bearish
+A bull market is one where optimistic view (buy)
+A bear market pessimistic view (sell)
+
+
+These might change over global economic concerns, national economic data, or corporate financial performance as examples.
+
+
+Dramatic rise in MACD might mean overbought, so price comes back down.
+Divergence of security price from MACD, might be the end of a current trend.
+
+
+Stochastic Oscillator:  Compares a security’s closing price to its price range over a given time period.  The oscillator’s sensitivity to market movements can be reduced by adjusting the time period or by taking a moving average of the result.
+
+
+Is calculated by \%K=100[(C-L14)/(H14-L14)], where C is the most recent closing price, L14 is the low of the 14 previous trading sessions, H14 is the highest price traded during the same 14-day period (14 is a default number)
+\%D = 3-period moving average of \%K
+If \%K and \%D are both either over or under the overbought, or oversold points, then this could be a buy or sell trigger.
+
+
+\end{document}
+
